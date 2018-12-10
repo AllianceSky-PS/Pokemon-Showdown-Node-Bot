@@ -11,11 +11,11 @@
 *
 */
 
-exports.server = 'localhost';
+exports.server = 'impulse-neo.scalingo.io';
 
-exports.port = 8000;
+exports.port = 80;
 
-exports.serverid = 'localhost';
+exports.serverid = 'impulse';
 
 exports.autoReconnectDelay = 10 * 1000;
 exports.connectionTimeout = 2 * 60 * 1000;
@@ -44,9 +44,9 @@ exports.watchconfig = true;
 * Login Details
 */
 
-exports.nick = '';
+exports.nick = 'Impulse Ozonix';
 
-exports.pass = '';
+exports.pass = 'aaaaaa';
 
 exports.autoReloginDelay = 60 * 1000;
 
@@ -54,7 +54,7 @@ exports.autoReloginDelay = 60 * 1000;
 * Rooms to join
 */
 
-exports.rooms = ['lobby'];
+exports.rooms = 'official';
 
 /*
 * exports.rooms = 'all'; //For joining all rooms
@@ -78,6 +78,8 @@ exports.initCmds = ['|/avatar 120']; // Other commands (avatar, blockchallenges,
 */
 
 exports.exceptions = {
+	'princesky': true,
+	'alliancessky': true
 	// 'userid': true
 };
 
@@ -255,7 +257,7 @@ exports.moderation = {
 
 exports.aceptAll = false;
 
-exports.maxBattles = 1;
+exports.maxBattles = 6;
 
 exports.initBattleMsg = ['gl hf'];
 
@@ -319,7 +321,13 @@ exports.tourDefault = {
 	scoutProtect: false
 };
 
-exports.leaderboards = {};
+exports.leaderboards = {
+	winnerPoints: 5,
+	finalistPoints: 3,
+	semiFinalistPoints: 1,
+	battlePoints: 0,
+	onlyOfficial: true
+};
 
 /* Leaderboard example:
 exports.leaderboards['tournaments'] = {
